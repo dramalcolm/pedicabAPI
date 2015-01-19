@@ -31,7 +31,7 @@ class API {
     private $DB_PSWD;
 
     /* @name GetById */
-	/* @desc This is the PARENT constructor and executes when first called */ 
+    /* @desc This is the PARENT constructor and executes when first called */ 
     /* It will send the CORS headers, segment the URI, check environment */
     /* and create and test the database connection. */
     public function __construct() {
@@ -48,7 +48,7 @@ class API {
         /* Going to extract the URI segments into something usable */
         $this->createPoints();
 
-        /* Database connection information */
+        	/* Database connection information */
 		$host = explode('.', $_SERVER['HTTP_HOST']);
 
 		/* Multiple enviroment support */
@@ -72,10 +72,10 @@ class API {
 			break;
 		}
 
-		/* Create a new database object with above credentials, etc. */
+	/* Create a new database object with above credentials, etc. */
         $this->con = new mysqli($DB_HOST, $DB_USER, $DB_PSWD, $DB_NAME);
 
-        /* Check the datavase connection */
+        	/* Check the datavase connection */
 		if ($this->con->connect_error) {
 		    die("Database connection failed: " . $this->con->connect_error);
 		}
@@ -83,13 +83,13 @@ class API {
     }
 
     /* @name __destruct */
-	/* @desc Destructor simply closes the database connection */
+    /* @desc Destructor simply closes the database connection */
     public function __destruct() {
         $this->con->close();
     }
 
     /* @name createPoints */
-	/* @desc Make something useful out of the URI for processing */
+    /* @desc Make something useful out of the URI for processing */
     /* Also using PHP's sanitize filters for quick cleaning of data passed along the URI */
     /* You may want to filter specific by there type for more strict santizing */
     private function createPoints() {
@@ -104,7 +104,7 @@ class API {
 	/* @name GetById */
 	/* @param int $status */
 	/* @desc Just gives semantic meaning to the status code and then returns the array value. */
-    /* We have added some page126 specific codes used by the endpoint models. */
+        /* We have added some page126 specific codes used by the endpoint models. */
 	public function getStatusCodeMessage($status)
 	{
 
