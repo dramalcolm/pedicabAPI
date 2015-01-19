@@ -49,7 +49,7 @@ class PAGE extends API {
 				
 				/* Based on shared status (returned key) and determine whether we will authorize it or not */
 				/* 1 = authorized; 0 = not authorized */
-				if($row['shared'] === 1) {
+				if($row['shared'] == 1) {
 					$data = array("title"=>$row['title'], "content"=>$row['content']);
 					$this->sendResponse(200, json_encode($data));
 					return true;
