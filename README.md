@@ -13,7 +13,7 @@ GPL 3, http://opensource.org/licenses/GPL-3.0
 __Usage:__  
 http://[domain]/[version]/[endpoint]/[verb]/[id]/
 
-__Returned Result:__
+__Returned Result:__  
 {"title":"Quam Sit","content":"Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."}
 
 __Still Todo:__  
