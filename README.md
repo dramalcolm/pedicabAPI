@@ -13,6 +13,6 @@ http://[domain]/[version]/[endpoint]/[verb]/[id]/
 Returns:
 {"title":"Quam Sit","content":"Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."}
 
-Todos:
-1. Implement public API Key
-2. Implement private API Secret Key
+Todos: 
+1. Implement public API Key  
+2. Implement private API Secret Key  
